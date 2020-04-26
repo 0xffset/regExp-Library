@@ -84,7 +84,7 @@ class URLS {
     }
 }
 
-module.export = {
+module.exports = {
     EMAILS,
     PASSWORDS,
     URLS
