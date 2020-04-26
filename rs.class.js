@@ -1,8 +1,8 @@
 
 class EMAILS {
     constructor(email) {
-        if (email == null || typeof email == 'undefined' || email == '') {
-            return JSON.stringify({ error: 'Please, insert you email' })
+        if (typeof email !== 'string' || email == '') {
+            throw new TypeError('regExp wants a email')
         } else {
             this.email = email;
         }
@@ -19,8 +19,8 @@ class EMAILS {
 
 class PASSWORDS {
     constructor(password) {
-        if (password == null || typeof password == 'undefined' || password == '') {
-            return JSON.stringify({ error: 'Please, insert you password' })
+        if (typeof password !== 'string' || password == '') {
+            throw new TypeError('regExp wants a password')
         } else {
             this.password = password;
         }
@@ -70,8 +70,8 @@ class PASSWORDS {
 
 class URLS {
     constructor(url) {
-        if (url == null || typeof url == 'undefined' || url == '') {
-            return JSON.stringify({ error: 'Please, insert you password' })
+        if (typeof url !== 'string' || url == '') {
+            throw new TypeError('regExp wants a url')
         } else {
             this.url = url;
         }
@@ -84,9 +84,11 @@ class URLS {
     }
 }
 
+
 module.exports = {
     EMAILS,
     PASSWORDS,
     URLS
 }
+
 
