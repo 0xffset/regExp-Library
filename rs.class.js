@@ -84,6 +84,9 @@ class URLS {
     }
 }
 
+module.export = {
+    EMAILS,
+    PASSWORDS,
+    URLS
+}
 
-const obj = new URLS('https://www.google.com');
-obj.isValidUrl()
